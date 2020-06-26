@@ -7,8 +7,6 @@ inputs:
   webhook_secret:
     description: 'The secret'
     required: true
-  webhook_auth:
-    description: 'Credentials to be used for BASIC authentication'
     
 runs:
   using: 'docker'
