@@ -16,7 +16,7 @@ echo "webhook_guid"
 echo $WEBHOOK_GUID
 
 
-curl -X POST \ 
+curl -X POST \
     -H "content-type: application/json" \
     -H "User-Agent: User-Agent: GitHub-Hookshot/760256b" \
     -H "x-hub-signature: sha1=$WEBHOOK_SIGNATURE" \
