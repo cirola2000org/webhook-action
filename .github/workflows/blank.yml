@@ -23,5 +23,5 @@ jobs:
     - name: Invoke deployment hook
       uses: cirola2000org/webhook-action@v0.0.1
       env:
-        webhook_url: "oi"
-        webhook_secret: "ola"
+        webhook_url: ${{ secrets.MY_WEBHOOK_URL }}
+        webhook_secret: ${{ secrets.MY_WEBHOOK_SECRET }}
