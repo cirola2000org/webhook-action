@@ -4,7 +4,7 @@ set -eu
 WEBHOOK_DATA="\"repository\":\"$GITHUB_REPOSITORY\",\"ref\":\"$GITHUB_REF\",\"commit\":\"$GITHUB_SHA\",\"trigger\":\"$GITHUB_EVENT_NAME\",\"workflow\":\"$GITHUB_WORKFLOW\""
 WEBHOOK_SIGNATURE=$(echo -n "{$WEBHOOK_DATA}" | openssl sha1 -hmac "$webhook_secret" -binary | xxd -p)
 WEBHOOK_ENDPOINT=$webhook_url
-WEBHOOK_GUID=$("+%Y%m%d-%H%M%S%3N")
+WEBHOOK_GUID=$(date "+%Y%m%d-%H%M%S%3N")
 
 curl -X POST \
     -H "content-type: application/json" \
