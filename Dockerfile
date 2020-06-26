@@ -2,7 +2,7 @@ FROM ubuntu:bionic
 
 LABEL "name"="webhook-action"
 LABEL "repository"="https://github.com/cirola2000org/webhook-ation"
-LABEL "version"="0.0.2"
+LABEL "version"="v0.0.3"
 LABEL com.github.actions.name="Actions Webhook"
 LABEL com.github.actions.description="Call github webhook"
 LABEL com.github.actions.icon="link"
