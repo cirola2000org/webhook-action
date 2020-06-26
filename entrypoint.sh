@@ -6,6 +6,16 @@ WEBHOOK_SIGNATURE=$(echo -n "$WEBHOOK_DATA" | openssl sha1 -hmac "$webhook_secre
 WEBHOOK_ENDPOINT=$webhook_url
 WEBHOOK_GUID="896668ab-8924-4196-9653-8aca50720d46"
 
+echo "request to:"
+echo $WEBHOOK_ENDPOINT
+echo "data"
+echo $WEBHOOK_DATA
+echo "Signature"
+echo $WEBHOOK_SIGNATURE
+echo "webhook_guid"
+echo $WEBHOOK_GUID
+
+
 curl -X POST \ 
     -H "content-type: application/json" \
     -H "User-Agent: User-Agent: GitHub-Hookshot/760256b" \
