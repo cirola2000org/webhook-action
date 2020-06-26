@@ -1,0 +1,19 @@
+name: 'Webhook Action'
+description: 'Webhook-action'
+inputs:
+  webhook_url:
+    description: 'The url'
+    required: true
+  webhook_secret:
+    description: 'The secret'
+    required: true
+  webhook_auth:
+    description: 'Credentials to be used for BASIC authentication'
+    
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding:
+  icon: 'terminal'
+  color: 'gray'
