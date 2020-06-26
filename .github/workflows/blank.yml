@@ -21,7 +21,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Invoke deployment hook
-      uses: cirola2000org/webhook-action@v0.0.11
+      uses: cirola2000org/webhook-action@v0.0.12
       env:
         webhook_url: "https://minha-casa.ddns.net:443/api/v2/workflow_job_templates/13/github/"
         webhook_secret: ${{ secrets.WEBHOOK_SECRET }}
