@@ -22,4 +22,4 @@ curl -X POST \
     -H "x-hub-signature: sha1=$WEBHOOK_SIGNATURE" \
     -H "x-gitHub-delivery: $WEBHOOK_GUID" \
     -H "x-github-event: $GITHUB_EVENT_NAME" \
-    --data "$WEBHOOK_DATA" $WEBHOOK_ENDPOINT
+    --data "{$WEBHOOK_DATA}" $WEBHOOK_ENDPOINT
