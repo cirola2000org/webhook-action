@@ -2,9 +2,10 @@
 set -eu
 
 WEBHOOK_DATA="\"repository\":\"$GITHUB_REPOSITORY\",\"ref\":\"$GITHUB_REF\",\"commit\":\"$GITHUB_SHA\",\"trigger\":\"$GITHUB_EVENT_NAME\",\"workflow\":\"$GITHUB_WORKFLOW\""
-WEBHOOK_SIGNATURE=$(echo -n "${WEBHOOK_DATA}" | openssl sha1 -hmac "$webhook_secret" -binary | xxd -p)
+WEBHOOK_SIGNATURE=$(echo -n "{$WEBHOOK_DATA}" | openssl sha1 -hmac "$webhook_secret" -binary | xxd -p)
 WEBHOOK_ENDPOINT=$webhook_url
 WEBHOOK_GUID="896668ab-8924-4196-9653-8aca50720d46"
+
 
 echo "request to:"
 echo $WEBHOOK_ENDPOINT
